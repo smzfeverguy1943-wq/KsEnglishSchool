@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>木下英語教室</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin: 40px; }
+    header { background: #4CAF50; color: white; padding: 15px; }
+    section { margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>木下英語教室</h1>
+    <p>初心者も安心！楽しく学べる英語教室</p>
+  </header>
+
+  <section>
+    <h2>教室紹介</h2>
+    <p>会話を中心に、英語を楽しく身につけられるレッスンを行っています。</p>
+  </section>
+
+  <section>
+    <h2>アクセス用QRコード</h2>
+    <div id="qrcode"></div>
+  </section>
+
+  <script>
+    const siteURL = "https://smzfeverguy1943-wq.github.io/KsEnglishSchool/";
+    new QRCode(document.getElementById("qrcode"), {
+      text: siteURL,
+      width: 200,
+      height: 200
+    });
+  </script>
+</body>
+</html>
