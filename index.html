@@ -11,8 +11,47 @@
  <body>  
  <section>
   <h1>木下英語教室</h1>
+ </section>
+
+ <section>  
   <h2>ご案内</h2>
-  <img src="Homepage2.png" alt="無料体験のご案内とその連絡先" style="max-width: 200%; height: auto;">
+ </section>
+
+ <section>
+  <img src="Homepage3.png" style="max-width: 100%; height: auto;">
+ </section>
+
+ <section id=contact-section>  
+  <h3>ご連絡先はこちらから</h3> 
  </section>  
  </body>
  </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const target = document.getElementById('contact-section');
+    if (!target) return;
+
+    const contacts = [
+      'LINE: sample.me/hgtinvbdvyt'
+      'メール: info@kinoshita-english.jp'
+    ];
+
+    const wrapper = document.createElement('div');
+    wrapper.style.margin = '20px 0';
+    wrapper.style.fontSize = '1.1rem';
+    wrapper.style.fontWeight = '500';
+    wrapper.style.lineHeight = '1.8';
+
+    contacts.forEach((text, i) => {
+      const span = document.createElement('span');
+      span.textContent = text;
+      wrapper.appendChild(span);
+      if (i !== contacts.length - 1) {
+        wrapper.appendChild(document.createElement('br'));
+      }
+    });
+
+    target.appendChild(wrapper);
+  });
+</script>
